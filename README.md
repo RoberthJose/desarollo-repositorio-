@@ -13,9 +13,9 @@ Este repositorio fue creado con el propósito de almacenar y organizar todos los
 
 Familiarizar a los estudiantes con el uso de GitHub y los sistemas de control de versiones mediante la creación y administración de repositorios.
 
-## Integrantes del Grupo
+## Integrantes del Grupo#12
 
-- Roberth Jose Jurado Intriago
+-  Jurado Intriago Roberth Jose
 - Ochoa Chonillo Samantha Maite
 - Cevallos Mendoza Melany Nahomy
 
