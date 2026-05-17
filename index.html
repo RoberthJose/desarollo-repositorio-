@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora Premium</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <!-- ===== PARTE SUPERIOR ===== -->
+        <div class="top">
+
+            <button class="menu-btn">☰</button>
+
+            <h1 class="title">Calculadora</h1>
+
+            <button class="theme-btn" id="themeToggle">🌙</button>
+
+        </div>
+
+        <!-- ===== TABS ===== -->
+        <div class="tabs">
+
+            <button class="tab active">
+                Básica
+            </button>
+
+            <!-- LINK A CIENTÍFICA -->
+            <a href="cientifica.html">
+                <button class="tab">
+                    Científica
+                </button>
+            </a>
+
+        </div>
+
+        <!-- ===== PANTALLA LIMPIA ===== -->
+        <div class="display">
+
+            <div class="history" id="history"></div>
+
+            <div class="result" id="result"></div>
+
+        </div>
+
+        <!-- ===== BOTONES ===== -->
+        <div class="buttons">
+
+            <button class="clear" onclick="clearDisplay()">AC</button>
+
+            <button class="special" onclick="deleteLast()">⌫</button>
+
+            <button class="special" onclick="appendValue('%')">%</button>
+
+            <button class="operator" onclick="appendValue('/')">÷</button>
+
+            <button class="number" onclick="appendValue('7')">7</button>
+            <button class="number" onclick="appendValue('8')">8</button>
+            <button class="number" onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('*')">×</button>
+
+            <button class="number" onclick="appendValue('4')">4</button>
+            <button class="number" onclick="appendValue('5')">5</button>
+            <button class="number" onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('-')">−</button>
+
+            <button class="number" onclick="appendValue('1')">1</button>
+            <button class="number" onclick="appendValue('2')">2</button>
+            <button class="number" onclick="appendValue('3')">3</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+
+            <button class="special" onclick="squareRoot()">√</button>
+
+            <button class="number" onclick="appendValue('0')">0</button>
+
+            <button class="number" onclick="appendValue('.')">.</button>
+
+            <button class="equal" onclick="calculate()">=</button>
+
+        </div>
+
+        <!-- ===== HISTORIAL LIMPIO ===== -->
+        <div class="history-box">
+
+            <div class="history-header">
+
+                <h3>Historial</h3>
+
+                <button class="clear-history">Limpiar</button>
+
+            </div>
+
+            <div id="historyList"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
