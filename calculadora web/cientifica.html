@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FUENTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===== CALCULADORA ===== -->
+
+    <div class="calculator scientific-calculator">
+
+        <!-- ===== TOP ===== -->
+
+        <div class="top">
+
+            <!-- MENU -->
+            <button class="menu-btn">
+                ☰
+            </button>
+
+            <!-- TITULO -->
+            <h1 class="title">
+                Calculadora 
+            </h1>
+
+            <!-- TEMA -->
+            <button class="theme-btn" id="themeToggle">
+                🌙
+            </button>
+
+        </div>
+
+        <!-- ===== TABS ===== -->
+
+        <div class="tabs">
+
+            <!-- BASICA -->
+            <button 
+                class="tab"
+                onclick="window.location.href='calculadora.html'">
+                Básica
+            </button>
+
+            <!-- CIENTIFICA -->
+            <button 
+                class="tab active">
+                Científica
+            </button>
+
+        </div>
+
+        <!-- ===== DISPLAY ===== -->
+
+        <div class="display">
+
+            <div class="history" id="history"></div>
+
+            <div class="result" id="result">
+                0
+            </div>
+
+        </div>
+
+        <!-- ===== BOTONES ===== -->
+
+        <div class="buttons scientific-buttons">
+
+            <!-- FILA 1 -->
+
+            <button class="clear" onclick="clearDisplay()">
+                AC
+            </button>
+
+            <button class="special" onclick="deleteLast()">
+                ⌫
+            </button>
+
+            <button class="special" onclick="appendValue('(')">
+                (
+            </button>
+
+            <button class="special" onclick="appendValue(')')">
+                )
+            </button>
+
+            <button class="operator" onclick="appendValue('/')">
+                ÷
+            </button>
+
+            <!-- FILA 2 -->
+
+            <button class="special" onclick="sinFunction()">
+                sin
+            </button>
+
+            <button class="special" onclick="cosFunction()">
+                cos
+            </button>
+
+            <button class="special" onclick="tanFunction()">
+                tan
+            </button>
+
+            <button class="special" onclick="logFunction()">
+                log
+            </button>
+
+            <button class="operator" onclick="appendValue('*')">
+                ×
+            </button>
+
+            <!-- FILA 3 -->
+
+            <button class="special" onclick="lnFunction()">
+                ln
+            </button>
+
+            <button class="special" onclick="squareRoot()">
+                √
+            </button>
+
+            <button class="special" onclick="powerTwo()">
+                x²
+            </button>
+
+            <button class="special" onclick="powerFunction()">
+                xʸ
+            </button>
+
+            <button class="operator" onclick="appendValue('-')">
+                −
+            </button>
+
+            <!-- FILA 4 -->
+
+            <button class="special" onclick="appendValue('3.14159265359')">
+                π
+            </button>
+
+            <button class="special" onclick="appendValue('2.718281828')">
+                e
+            </button>
+
+            <button class="special" onclick="factorialFunction()">
+                x!
+            </button>
+
+            <button class="special" onclick="appendValue('%')">
+                %
+            </button>
+
+            <button class="operator" onclick="appendValue('+')">
+                +
+            </button>
+
+            <!-- FILA 5 -->
+
+            <button class="number" onclick="appendValue('7')">
+                7
+            </button>
+
+            <button class="number" onclick="appendValue('8')">
+                8
+            </button>
+
+            <button class="number" onclick="appendValue('9')">
+                9
+            </button>
+
+            <button class="special" onclick="memoryClear()">
+                MC
+            </button>
+
+            <button class="special" onclick="memoryAdd()">
+                M+
+            </button>
+
+            <!-- FILA 6 -->
+
+            <button class="number" onclick="appendValue('4')">
+                4
+            </button>
+
+            <button class="number" onclick="appendValue('5')">
+                5
+            </button>
+
+            <button class="number" onclick="appendValue('6')">
+                6
+            </button>
+
+            <button class="special" onclick="memorySubtract()">
+                M-
+            </button>
+
+            <button class="special" onclick="memoryRecall()">
+                MR
+            </button>
+
+            <!-- FILA 7 -->
+
+            <button class="number" onclick="appendValue('1')">
+                1
+            </button>
+
+            <button class="number" onclick="appendValue('2')">
+                2
+            </button>
+
+            <button class="number" onclick="appendValue('3')">
+                3
+            </button>
+
+            <button class="special" onclick="randomFunction()">
+                Rand
+            </button>
+
+            <button class="equal" onclick="calculate()">
+                =
+            </button>
+
+            <!-- FILA 8 -->
+
+            <button class="number zero" onclick="appendValue('0')">
+                0
+            </button>
+
+            <button class="number" onclick="appendValue('.')">
+                .
+            </button>
+
+        </div>
+
+        <!-- ===== HISTORIAL ===== -->
+
+        <div class="history-box">
+
+            <div class="history-header">
+
+                <h3>
+                    Historial
+                </h3>
+
+                <button class="clear-history">
+                    Limpiar
+                </button>
+
+            </div>
+
+            <div id="historyList"></div>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
